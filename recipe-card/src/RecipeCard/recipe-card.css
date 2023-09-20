@@ -1,0 +1,44 @@
+  @import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@300&display=swap');
+
+
+.card{
+    width: 95%;
+    height: 50%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+.card .card-img{
+    width: 40%;
+    height: 40%;
+    margin: 15px;
+    border-radius: 20px;
+    float: left;
+    box-shadow: 10px 10px 10px rgba(31, 31, 31, 0.185);
+}
+
+.card .recipe-table{
+    width: 50%;
+    height: 50%;
+    margin: 15px;
+    flex-wrap: wrap;
+}
+
+.recipe-table th{
+    font-size: 20px;
+    color: rgb(26, 26, 26);
+}
+
+.recipe-table li{
+    padding: 5px;
+}
