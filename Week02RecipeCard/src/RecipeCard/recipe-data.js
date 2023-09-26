@@ -4,13 +4,13 @@ export const RECIPE = {
     description:
       'It is a traditional Indian dessert, known as Gulab Jamun. It is a milk-solid-based sweet. It is soaked in a sugar syrup flavored with cardamom seeds and rosewater.',
     ingredients: [
-      { name:'Milk powder', measure: '1 cup' },
-      { name:'All-purpose flour', measure: '1/4 cup' },
-      { name:'Ghee (clarified butter)', measure: '1/4 cup' },
-      { name:'Milk', measure: '1/4 cup' },
-      { name:'Baking soda', measure: '1/4 tsp' },
-      { name:'Cardamom powder', measure: 'A pinch' },
-      { name:'Oil for deep frying', measure: 'As required' },
+        '1 cup of milk powder',
+        '1/4 cup of all-purpose flour',
+        '1/4 cup of ghee (clarified butter)',
+        '1/4 cup of milk',
+        '1/4 tsp of baking soda',
+        'A pinch of cardamom powder',
+        'Oil for deep frying',
     ],
     instructions: [
         'In a mixing bowl, combine milk powder, all-purpose flour, ghee, milk, baking soda, and cardamom powder.',
