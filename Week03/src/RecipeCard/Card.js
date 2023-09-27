@@ -1,7 +1,11 @@
-import React from 'react'
-import styles from './RecipeCard.module.css'
+import React from "react";
+import styles from "./RecipeCard.module.css";
 // Hmmm. This looks like a reusable UI component...
 // Lets discuss next class
 export default function Card(props) {
-  return <div className={styles.card}>{props.children}</div>
+  return (
+    <div className={styles.cardcontainer}>
+      <div className={styles.card}>{props.children}</div>
+    </div>
+  );
 }
