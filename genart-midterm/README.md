@@ -11,5 +11,7 @@ Here is the screenshot and a demo of the project:
 
 
 
-https://github.com/harshpalan/DynamicWebClass/assets/10105238/26fc28ba-67bf-458d-86fe-c85b4d7f1530
+
+
+https://github.com/harshpalan/DynamicWebClass/assets/10105238/dae6f525-e2cb-4138-a16e-5952a4073f4e
 
