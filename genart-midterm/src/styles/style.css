@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Dosis:wght@300&family=Roboto:wght@100;300;400&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(closest-side, #8f0546, #992e57, #23a6d5, #23a2d5);
+  background-size: 1000% 1000%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'SupplyMono';
+  src: url('../fonts/PPSupplyMono-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SupplyMonoLight';
+  src: url('../fonts/PPSupplyMono-Ultralight.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Nabla';
+  src: url('../fonts/Nabla-Regular.ttf') format('truetype');
+}
+
+.navigation{
+  width: 100%;
+	background: #0f0f0f;
+	height: 4rem;
+	position: fixed;
+	z-index: 1;
+	backdrop-filter: blur(15px) saturate(200%);
+	-webkit-backdrop-filter: blur(15px) saturate(200%);
+	background-color: rgba(0, 0, 0, 0.541);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation a{
+  font-family: 'Nabla';
+  font-size: 2.25rem;
+  text-decoration: none;
+}
+
+.navigation a:hover{
+  font-size: 2.55rem;
+}
+
+.logo{
+  width: 5rem;
+}
+
+.container-fluid{
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  border-radius: 3rem;
+  margin: 0.1rem 1.75rem;
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(100%) drop-shadow(5px 5px 20px #000000);
+}
+
+canvas:hover {
+  transform: scale(1.01);
+  filter: grayscale(0%) drop-shadow(10px 10px 20px #000000);
+}
+
+.row{
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.col{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas-container{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-p5-wrapper{
+  width: fit-content;
+}
