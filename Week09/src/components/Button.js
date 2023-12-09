@@ -1,36 +1,46 @@
+// @flow
+import * as React from "react";
 import cx from "classnames";
 import { twMerge } from "tailwind-merge";
 
-Button.propTypes = {
-  checkVariationValue: ({ primary, secondary, success, warning, danger }) => {
-    const count =
-      Number(!!primary) +
-      Number(!!secondary) +
-      Number(!!success) +
-      Number(!!warning) +
-      Number(!!danger);
-
-    if (count > 1) {
-      return new Error(
-        " Only one of primary,secondary, success, warning or danger can be true"
-      );
-    }
-  },
+export type ButtonProps = {
+  /** Text and/or option Icon to display within the Button */
+  children: React.Node,
+  /** Primary Button style */
+  primary?: boolean,
+  /** Secondary Button style */
+  secondary?: boolean,
+  /** Success Button style */
+  success?: boolean,
+  /** Warning Button style */
+  warning?: boolean,
+  /** Danger Button style */
+  danger?: boolean,
+  /** Outline Button style */
+  outline?: boolean,
+  /** Rounded Button style */
+  rounded?: boolean,
+  /** Custom class name to apply to the Button */
+  className?: string,
+  /** Function to call when the Button is clicked */
+  onClick?: (event: SyntheticEvent<>) => mixed,
 };
 
-export default function Button({
-  children,
-  primary,
-  secondary,
-  success,
-  warning,
-  danger,
-  outline,
-  rounded,
-  ...otherProps
-}) {
+export default function Button(props: ButtonProps): React.MixedElement {
+  const {
+    children,
+    primary,
+    secondary,
+    success,
+    warning,
+    danger,
+    outline,
+    rounded,
+    className,
+    onClick,
+  } = props;
   const classes = twMerge(
-    cx(otherProps.className, "flex items-center px-8 py-3 border", {
+    cx(className, "flex items-center px-8 py-3 border", {
       "border-blue-500 bg-blue-600 text-white": primary,
       "border-gray-900 bg-gray-800 text-white": secondary,
       "border-green-500 bg-green-600 text-white": success,
@@ -49,7 +59,7 @@ export default function Button({
   );
 
   return (
-    <button {...otherProps} className={classes}>
+    <button onClick={onClick} className={classes}>
       {children}
     </button>
   );
