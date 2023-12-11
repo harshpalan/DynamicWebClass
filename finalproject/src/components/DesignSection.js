@@ -14,6 +14,7 @@ const Section = styled.section`
 
   background-color: var(--dark);
   overflow: hidden;
+  font-family: var(--fontS);
 `;
 
 const TestContainer = styled.p`
@@ -28,8 +29,8 @@ const TestContainer = styled.p`
   color: var(--white);
 
   span {
-    font-size: var(--fontxxxl);
-    width: 80%;
+    font-size: var(--fontBig);
+    width: 90%;
     text-transform: capitalize;
   }
 `;
@@ -46,8 +47,8 @@ const TestContainer2 = styled.p`
   color: var(--white);
 
   span {
-    font-size: var(--fontxxxl);
-    width: 70%;
+    font-size: var(--fontBig);
+    width: 80%;
     text-transform: capitalize;
   }
 `;
@@ -72,7 +73,7 @@ const DesignSection = () => {
 
     return () => {
       if (tl) {
-        tl.kill();``
+        tl.kill();
       }
     };
   }, []);

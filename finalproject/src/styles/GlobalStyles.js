@@ -44,7 +44,6 @@ export const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
-		font-family: 'Futura Regular', sans-serif;
 		overflow-x: hidden;
 	}
 
@@ -63,7 +62,7 @@ export const GlobalStyles = createGlobalStyle`
 	// Colors
 	--dark: #000000;
 	--grey: #666666;
-	--greyLight: #979797;
+	--greyLight: #cecece;
 	--offWhite: #eeeeee;
 	--white: #ffffff;
 	--blue: #0071e3;
@@ -77,6 +76,7 @@ export const GlobalStyles = createGlobalStyle`
 	
 	// gradient
 	--gradient: #35c3f3 0%, #8b9fe8 20%, #e681d8 39%, #ffa9a4 76%, #fed2ce 100%;
+	--gradient2:  rgba(180,58,58,1) 0%, rgba(253,29,29,1) 38%, rgba(253,131,44,1) 67%, rgba(253,178,56,1) 84%, rgba(252,188,69,1) 100%;
 }
 
 `;
