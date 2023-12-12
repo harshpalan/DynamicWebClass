@@ -7,6 +7,8 @@ import DesignSection from "./components/DesignSection";
 import DisplaySection from "./components/DisplaySection";
 import ProcessorSection from "./components/ProcessorSection";
 import BatterySection from "./components/BatterySection";
+import ColorSection from "./components/ColorSection";
+import GameSection from "./components/GameSection";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <DisplaySection />
       <ProcessorSection />
       <BatterySection />
+      <GameSection />
+      <ColorSection />
     </div>
   );
 }

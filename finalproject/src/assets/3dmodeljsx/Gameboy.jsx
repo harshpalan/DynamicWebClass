@@ -14,18 +14,29 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('/3dmodel/gameboy.glb')
 
   let camera = useThree((state) => state.camera);
+  let scene = useThree((state) => state.scene);
 
   useLayoutEffect(() => {
+    camera.position.set(-150, 0, 250);
+
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#gameboy-model",
-        start: "top top",
-        end: "bottom+=1200 bottom",
+        start: "top+=350 top",
+        endTrigger: "#battery",
+        end: "top top",
         scrub: true,
       }
     });
       
-    tl.fromTo(camera.position, { x: -200, y: 0, z: 300 }, { x: 0, y: 0, z: 250 })
+    tl.fromTo(camera.position, { x: -200, y: 0, z: 300 }, { x: 0, y: 0, z: 180 })
+      .to(camera.position, { x: 10, y: 0, z: 250 })
+    .to(scene.rotation, { x:0, y: 0.2 ,z: 0.8 , duration: 1.25})
+      .to(scene.rotation, { x: 0, y: 2.95, z:0})
+      .to(scene.rotation, { x: 0, y: 6.2, z: 0 })
+      .to(camera.position, { x: -150, y: 0, z: 250, delay: 1.25 })
+      .to(camera.position, { x: 175, y: 0, z: 300 })
+      .to(scene.rotation, { x: 0.15, y: 1.25, z: 0 })
   });
 
   return (

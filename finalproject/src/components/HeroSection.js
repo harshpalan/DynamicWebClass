@@ -20,7 +20,7 @@ const Title = styled.h1`
   top: 2rem;
   left: 2rem;
 
-  font-size: var(--fontxl);
+  font-size: var(--fontxxxl);
   font-family: var(--fontS);
   color: yellow;
 
@@ -50,10 +50,32 @@ const TextContainer = styled.div`
   z-index: 1;
 
   span {
-    font-size: var(--fontxl);
+    font-size: var(--fontxxxl);
     text-transform: uppercase;
     font-weight: 600;
-    padding: 3rem;
+    padding: 2rem;
+
+    @media screen and (max-width: 64em) {
+      font-size: var(--fontxxl);
+      padding: 0;
+    }
+    @media screen and (max-width: 48em) {
+      font-size: var(--fontxl);
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    flex-direction: column;
+    background-image: linear-gradient(90deg, var(--gradient));
+    align-items: flex-start;
+    filter: brightness(1.1);
+
+    & > *:last-child {
+      align-self: flex-end;
+    }
+
+    height: 80vh;
+    padding: 0 1rem;
   }
 `;
 

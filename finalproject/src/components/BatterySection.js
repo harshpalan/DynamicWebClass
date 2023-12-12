@@ -79,7 +79,7 @@ const BatterySection = () => {
   }, []);
 
   return (
-    <Section>
+    <Section id="battery">
       <Title>All Day Battery Life</Title>
       <Battery ref={battery}>
         <li />
