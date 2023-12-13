@@ -27,6 +27,20 @@ const Title = styled.h1`
 
   color: var(--white);
   font-family: var(--fontS);
+
+  @media screen and (max-width: 70em) {
+    font-size: var(--fontxxxl);
+  }
+  @media screen and (max-width: 64em) {
+    font-size: var(--fontxxl);
+  }
+  @media screen and (max-width: 48em) {
+    font-size: var(--fontlg);
+    transform: none;
+    left: 2rem;
+    top: 2rem;
+    width: 50%;
+  }
 `;
 
 const Battery = styled.ul`
@@ -50,6 +64,12 @@ const Battery = styled.ul`
 
   & > *:not(:first-child):not(:last-child) {
     margin: 0.5rem 0;
+  }
+
+  @media screen and (max-width: 48em) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 `;
 

@@ -1,10 +1,32 @@
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import { useThree } from "@react-three/fiber";
+import gsap from "gsap";
 
-export function Model2(props) {
-    const { nodes, materials } = useGLTF("/3dmodel/gameboycolor.glb");
+
+export default function Model2(props) {
+  const { nodes, materials } = useGLTF("/3dmodel/gameboycolor.glb");
+  let camera = useThree((state) => state.camera);
     
+  useLayoutEffect(() => {
+        let mm = gsap.matchMedia();
+  
+    mm.add({
+      isDesktop: `(min-width: 48em)`,
+      isMobile: `(max-width:48em`,
+    }, (context) => {
+      let { isDesktop, isMobile } = context.conditions;
+
+
+      if (isMobile) {
+        camera.fov = 3;
+        camera.updateProjectionMatrix();
+      }
+    });
+
     
+
+  }, []);
   return (
     <group {...props} dispose={null}>
       <group rotation={[-1.568, 0, 0]}>

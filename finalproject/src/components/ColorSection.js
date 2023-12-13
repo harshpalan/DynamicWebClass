@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import styled from "styled-components";
-import { Model2 } from "../assets/3dmodeljsx/Gameboy2";
+import Model2 from "../assets/3dmodeljsx/Gameboy2";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, useGLTF } from "@react-three/drei";
 import { Suspense } from "react";
@@ -46,6 +46,9 @@ const Colors = styled.ul`
   left: 20%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(104, 104, 104, 0.3);
+  padding: 0.5rem;
+  border-radius: 30px;
 
   @media screen and (max-width: 64em) {
     left: 10%;
@@ -61,7 +64,11 @@ const Color = styled.li`
   border-radius: 50%;
   background-color: ${(props) => props.color};
   margin: 0.5rem 0;
-  border: 1px solid var(--grey);
+
+  @media screen and (max-width: 64em) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 `;
 
 const IndicatorText = styled.div`

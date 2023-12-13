@@ -22,16 +22,15 @@ const Title = styled.h1`
 
   font-size: var(--fontxxxl);
   font-family: var(--fontS);
-  color: yellow;
+  color: rgb(255, 217, 0);
 
   @media screen and (max-width: 48em) {
-    font-size: var(--fontmd);
+    font-size: var(--fontxxl);
     left: 1rem;
   }
 
   @media screen and (max-width: 30em) {
     width: 70%;
-    color: var(--white);
   }
 `;
 
@@ -49,6 +48,8 @@ const TextContainer = styled.div`
   -webkit-text-fill-color: transparent;
   z-index: 1;
 
+  font-family: var(--fontP);
+
   span {
     font-size: var(--fontxxxl);
     text-transform: uppercase;
@@ -56,11 +57,11 @@ const TextContainer = styled.div`
     padding: 2rem;
 
     @media screen and (max-width: 64em) {
-      font-size: var(--fontxxl);
+      font-size: var(--fontxxxl);
       padding: 0;
     }
     @media screen and (max-width: 48em) {
-      font-size: var(--fontxl);
+      font-size: var(--fontxxl);
     }
   }
 

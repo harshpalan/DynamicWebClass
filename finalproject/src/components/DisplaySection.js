@@ -20,8 +20,18 @@ const Section = styled.section`
     text-align: right;
   }
 
+  @media screen and (max-width: 48em) {
+      margin-right: 1rem;
+    }
+  }
+
   & > *:nth-child(odd) {
     margin-left: 4rem;
+  }
+
+  @media screen and (max-width: 48em) {
+      margin-left: 1rem;
+    }
   }
 `;
 
@@ -34,6 +44,19 @@ const MainTitle = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 70em) {
+    font-size: var(--fontxxxl);
+  }
+  @media screen and (max-width: 64em) {
+    font-size: var(--fontxxl);
+  }
+  @media screen and (max-width: 48em) {
+    font-size: var(--fontxl);
+  }
+  @media screen and (max-width: 40em) {
+    font-size: var(--fontlg);
+  }
 `;
 
 const TextBlockL = styled.div`
@@ -58,6 +81,10 @@ const Title = styled.div`
   font-size: var(--fontlg);
   font-family: var(--fontP);
   margin-bottom: 1em;
+
+  @media screen and (max-width: 64em) {
+    font-size: var(--fontmd);
+  }
 `;
 
 const Text = styled.div`
@@ -65,6 +92,14 @@ const Text = styled.div`
   font-family: var(--fontP);
   margin-bottom: 0.55em;
   width: 55%;
+
+  @media screen and (max-width: 64em) {
+    width: 70%;
+  }
+  @media screen and (max-width: 48em) {
+    width: 100%;
+    font-size: var(--fontxxs);
+  }
 `;
 
 const TextContainer = styled.div`
@@ -87,6 +122,22 @@ const MovingText = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 70em) {
+    font-size: var(--fontxxxl);
+  }
+  @media screen and (max-width: 64em) {
+    font-size: var(--fontxxxl);
+  }
+  @media screen and (max-width: 48em) {
+    font-size: var(--fontxxl);
+  }
+  @media screen and (max-width: 40em) {
+    font-size: var(--fontxl);
+  }
+  @media screen and (max-width: 30em) {
+    font-size: var(--fontxl);
+  }
 `;
 
 const DisplaySection = () => {
@@ -103,7 +154,11 @@ const DisplaySection = () => {
           scrub: 1,
         },
       })
-      .fromTo(textOne.current, { x: "-120%" }, { x: "120%" });
+      .fromTo(
+        textOne.current,
+        { x: "-120%", delay: 1 },
+        { x: "100%", duration: 5 }
+      );
 
     return () => {
       if (tl) {

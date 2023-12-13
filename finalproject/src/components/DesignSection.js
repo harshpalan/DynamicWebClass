@@ -33,6 +33,22 @@ const TestContainer = styled.p`
     width: 90%;
     text-transform: capitalize;
   }
+
+  @media screen and (max-width: 70em) {
+    span {
+      font-size: var(--fontxxxl);
+    }
+  }
+  @media screen and (max-width: 64em) {
+    span {
+      font-size: var(--fontxxl);
+    }
+  }
+  @media screen and (max-width: 48em) {
+    span {
+      font-size: var(--fontxxl);
+    }
+  }
 `;
 
 const TestContainer2 = styled.p`
@@ -50,6 +66,22 @@ const TestContainer2 = styled.p`
     font-size: var(--fontBig);
     width: 80%;
     text-transform: capitalize;
+  }
+
+  @media screen and (max-width: 70em) {
+    span {
+      font-size: var(--fontxxl);
+    }
+  }
+  @media screen and (max-width: 64em) {
+    span {
+      font-size: var(--fontxxl);
+    }
+  }
+  @media screen and (max-width: 48em) {
+    span {
+      font-size: var(--fontxxl);
+    }
   }
 `;
 
