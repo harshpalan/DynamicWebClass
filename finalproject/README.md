@@ -4,4 +4,7 @@ Gameboy Fanboy is a website designed to showcase the Gameboy Color and its speci
 
 ## DEMO
 
-![Gameboy Fanboy Demo](demo.mp4)
+
+
+https://github.com/harshpalan/DynamicWebClass/assets/10105238/068ff8ae-0406-45d5-b99a-a277dc9b6d52
+
